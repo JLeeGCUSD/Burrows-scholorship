@@ -107,7 +107,6 @@
 
   input[type="text"],
   input[type="tel"],
-  input[type="date"],
   textarea {
     border: none;
     border-bottom: 1.5px solid #888;
@@ -124,7 +123,6 @@
 
   input[type="text"]:focus,
   input[type="tel"]:focus,
-  input[type="date"]:focus,
   textarea:focus {
     border-bottom-color: #1a3a5c;
   }
@@ -203,7 +201,6 @@
   }
 
   .btn-download:hover { background: #0f2540; }
-
   .btn-download:active { background: #0a1d30; }
 
   .submit-note {
@@ -217,6 +214,18 @@
     border: none;
     border-top: 1px solid #ddd;
     margin: 1.5rem 0;
+  }
+
+  .consent-inline {
+    display: inline;
+    width: 220px;
+    border: none;
+    border-bottom: 1.5px solid #888;
+    padding: 0 0.1rem;
+    font-size: 0.95rem;
+    font-family: Georgia, serif;
+    background: transparent;
+    outline: none;
   }
 
   @media (max-width: 600px) {
@@ -239,16 +248,14 @@
     <h1>Michael Burrows Foundation Scholarship</h1>
     <h2>Grayville, IL</h2>
   </div>
-
   <div class="intro-text">
     <p>Dear Candidate for Graduation:</p>
     <p>Since 2015, the Michael Burrows Foundation has awarded a scholarship to a graduating senior from Grayville High School. This scholarship is completely funded by donations from corporations, individuals, GHS alumni and friends.</p>
     <p>The directors of the Foundation will review the applications and announce the winner at this year's high school commencement. Be sure to proofread your application for spelling and grammar.</p>
     <p>Please return the application to your guidance counselor and she will sign the document and list your class rank, grade point average and applicable college scores.</p>
   </div>
-
   <div class="highlight-box">
-    Email Completed Form to: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ce85bcaba7aa8ea9adbbbdaae0ada1a3">[email&#160;protected]</a><br>
+    Email Completed Form to: Kreid@gcusd.com<br>
     All applications must be turned in no later than <strong>May 1, 2026</strong>
   </div>
 </div>
@@ -259,170 +266,67 @@
   <div class="section-title">Michael Burrows Foundation<br>Scholarship Application</div>
 
   <div class="field-row">
-    <div class="field-group flex-2">
-      <label>First Name</label>
-      <input type="text" id="fname" placeholder="">
-    </div>
-    <div class="field-group flex-2">
-      <label>Last Name</label>
-      <input type="text" id="lname" placeholder="">
-    </div>
-    <div class="field-group flex-1">
-      <label>Middle Name</label>
-      <input type="text" id="mname" placeholder="">
-    </div>
+    <div class="field-group flex-2"><label>First Name</label><input type="text" id="fname"></div>
+    <div class="field-group flex-2"><label>Last Name</label><input type="text" id="lname"></div>
+    <div class="field-group flex-1"><label>Middle Name</label><input type="text" id="mname"></div>
   </div>
-
   <div class="field-row">
-    <div class="field-group flex-3">
-      <label>Street Address</label>
-      <input type="text" id="street" placeholder="">
-    </div>
-    <div class="field-group flex-2">
-      <label>City</label>
-      <input type="text" id="city" placeholder="">
-    </div>
-    <div class="field-group flex-1">
-      <label>ZIP</label>
-      <input type="text" id="zip" placeholder="">
-    </div>
+    <div class="field-group flex-3"><label>Street Address</label><input type="text" id="street"></div>
+    <div class="field-group flex-2"><label>City</label><input type="text" id="city"></div>
+    <div class="field-group flex-1"><label>ZIP</label><input type="text" id="zip"></div>
   </div>
-
   <div class="field-row">
-    <div class="field-group flex-1">
-      <label>Date of Birth</label>
-      <input type="text" id="dob" placeholder="MM/DD/YYYY">
-    </div>
-    <div class="field-group flex-2">
-      <label>Phone Number</label>
-      <input type="tel" id="phone" placeholder="">
-    </div>
+    <div class="field-group flex-1"><label>Date of Birth</label><input type="text" id="dob" placeholder="MM/DD/YYYY"></div>
+    <div class="field-group flex-2"><label>Phone Number</label><input type="tel" id="phone"></div>
   </div>
-
   <div class="field-row">
-    <div class="field-group full">
-      <label>Name of Parents or Guardians</label>
-      <input type="text" id="parents" placeholder="">
-    </div>
+    <div class="field-group full"><label>Name of Parents or Guardians</label><input type="text" id="parents"></div>
   </div>
 
   <hr class="divider">
 
-  <div class="field-row">
-    <div class="field-group full">
-      <label>Interest in Continuing Education?</label>
-      <input type="text" id="interest" placeholder="">
-    </div>
-  </div>
-
-  <div class="field-row">
-    <div class="field-group full">
-      <label>Level of Education That You Aspire to Obtain</label>
-      <input type="text" id="edu_level" placeholder="">
-    </div>
-  </div>
-
-  <div class="field-row">
-    <div class="field-group full">
-      <label>School You Will Be Attending</label>
-      <input type="text" id="school" placeholder="">
-    </div>
-  </div>
-
-  <div class="field-row">
-    <div class="field-group full">
-      <label>Scholarships Applied For</label>
-      <input type="text" id="schol_applied" placeholder="">
-    </div>
-  </div>
-
-  <div class="field-row">
-    <div class="field-group full">
-      <label>Scholarships Received</label>
-      <input type="text" id="schol_received" placeholder="">
-    </div>
-  </div>
+  <div class="field-row"><div class="field-group full"><label>Interest in Continuing Education?</label><input type="text" id="interest"></div></div>
+  <div class="field-row"><div class="field-group full"><label>Level of Education That You Aspire to Obtain</label><input type="text" id="edu_level"></div></div>
+  <div class="field-row"><div class="field-group full"><label>School You Will Be Attending</label><input type="text" id="school"></div></div>
+  <div class="field-row"><div class="field-group full"><label>Scholarships Applied For</label><input type="text" id="schol_applied"></div></div>
+  <div class="field-row"><div class="field-group full"><label>Scholarships Received</label><input type="text" id="schol_received"></div></div>
 
   <hr class="divider">
 
-  <div class="field-row">
-    <div class="field-group full">
-      <label>In what civic/religious activities (not related to school) have you participated?</label>
-      <textarea id="civic" class="long-area"></textarea>
-    </div>
-  </div>
-
-  <div class="field-row">
-    <div class="field-group full">
-      <label>In what school activities/clubs/organizations have you participated?</label>
-      <textarea id="school_activities" class="long-area"></textarea>
-    </div>
-  </div>
-
-  <div class="field-row">
-    <div class="field-group full">
-      <label>List the honors that you have received (include both school and non-school)</label>
-      <textarea id="honors" class="long-area"></textarea>
-    </div>
-  </div>
+  <div class="field-row"><div class="field-group full"><label>In what civic/religious activities (not related to school) have you participated?</label><textarea id="civic" class="long-area"></textarea></div></div>
+  <div class="field-row"><div class="field-group full"><label>In what school activities/clubs/organizations have you participated?</label><textarea id="school_activities" class="long-area"></textarea></div></div>
+  <div class="field-row"><div class="field-group full"><label>List the honors that you have received (include both school and non-school)</label><textarea id="honors" class="long-area"></textarea></div></div>
 </div>
 
 <!-- PAGE 3: Narrative -->
 <div class="page" id="page3">
   <div class="page-number">3 | P a g e</div>
   <div class="section-title">Michael Burrows Foundation Scholarship<br>Narrative</div>
-
   <div class="intro-text">
     <p>Please type a one-page narrative describing your future educational plans, a summary telling us about yourself, your future aspirations and the reason why you should be chosen as the recipient of this scholarship.</p>
   </div>
-
   <div class="field-row" style="margin-top:1rem;">
-    <div class="field-group full">
-      <textarea id="narrative" class="narrative-area" placeholder="Write your narrative here..."></textarea>
-    </div>
+    <div class="field-group full"><textarea id="narrative" class="narrative-area" placeholder="Write your narrative here..."></textarea></div>
   </div>
 </div>
 
-<!-- PAGE 4: Signatures & Consent -->
+<!-- PAGE 4: Signatures -->
 <div class="page" id="page4">
   <div class="page-number">4 | P a g e</div>
-
-  <div class="intro-text">
-    <p>Final selection for this scholarship may be asked to submit a cover letter to help with the selection process.</p>
-  </div>
-
+  <div class="intro-text"><p>Final selection for this scholarship may be asked to submit a cover letter to help with the selection process.</p></div>
   <hr class="divider">
-
-  <div class="intro-text" style="margin-bottom:0.75rem;">
-    <p>I hereby certify that the statements herein are true and correct to the best of my knowledge.</p>
-  </div>
-
+  <div class="intro-text" style="margin-bottom:0.75rem;"><p>I hereby certify that the statements herein are true and correct to the best of my knowledge.</p></div>
   <div class="signature-row">
-    <div class="field-group sig-field">
-      <label>Signature (type full name)</label>
-      <input type="text" id="sig1" placeholder="">
-    </div>
-    <div class="field-group date-field">
-      <label>Date</label>
-      <input type="text" id="date1" placeholder="MM/DD/YYYY">
-    </div>
+    <div class="field-group sig-field"><label>Signature (type full name)</label><input type="text" id="sig1"></div>
+    <div class="field-group date-field"><label>Date</label><input type="text" id="date1" placeholder="MM/DD/YYYY"></div>
   </div>
-
   <hr class="divider">
-
   <div class="consent-text">
-    I <input type="text" id="consent_name" style="display:inline;width:220px;border:none;border-bottom:1.5px solid #888;padding:0 0.1rem;font-size:0.95rem;font-family:Georgia,serif;background:transparent;outline:none;" placeholder="(your name)"> give consent to the Michael Burrows Foundation to obtain information and make inquiries needed to verify the information I have submitted to the foundation program under the laws of the state of Illinois, IRS code and related regulations.
+    I <input type="text" id="consent_name" class="consent-inline" placeholder="(your name)"> give consent to the Michael Burrows Foundation to obtain information and make inquiries needed to verify the information I have submitted to the foundation program under the laws of the state of Illinois, IRS code and related regulations.
   </div>
-
   <div class="signature-row">
-    <div class="field-group sig-field">
-      <label>Signature (type full name)</label>
-      <input type="text" id="sig2" placeholder="">
-    </div>
-    <div class="field-group date-field">
-      <label>Date</label>
-      <input type="text" id="date2" placeholder="MM/DD/YYYY">
-    </div>
+    <div class="field-group sig-field"><label>Signature (type full name)</label><input type="text" id="sig2"></div>
+    <div class="field-group date-field"><label>Date</label><input type="text" id="date2" placeholder="MM/DD/YYYY"></div>
   </div>
 </div>
 
@@ -430,333 +334,27 @@
 <div class="page" id="page5">
   <div class="page-number">5 | P a g e</div>
   <div class="section-title">Michael Burrows Foundation Scholarship<br>To Be Completed by Guidance Counselor</div>
-
   <div class="counselor-note">This section is to be filled in by your guidance counselor, not the applicant.</div>
-
   <div class="gpa-row">
-    <div class="field-group">
-      <label>Year Graduating</label>
-      <input type="text" id="grad_year" placeholder="">
-    </div>
-    <div class="field-group">
-      <label>High School Class Rank</label>
-      <input type="text" id="class_rank" placeholder="">
-    </div>
-    <div class="field-group">
-      <label>High School GPA</label>
-      <input type="text" id="gpa" placeholder="">
-    </div>
+    <div class="field-group"><label>Year Graduating</label><input type="text" id="grad_year"></div>
+    <div class="field-group"><label>High School Class Rank</label><input type="text" id="class_rank"></div>
+    <div class="field-group"><label>High School GPA</label><input type="text" id="gpa"></div>
   </div>
-
   <div class="gpa-row">
-    <div class="field-group">
-      <label>ACT Score</label>
-      <input type="text" id="act" placeholder="">
-    </div>
-    <div class="field-group">
-      <label>SAT Score</label>
-      <input type="text" id="sat" placeholder="">
-    </div>
+    <div class="field-group"><label>ACT Score</label><input type="text" id="act"></div>
+    <div class="field-group"><label>SAT Score</label><input type="text" id="sat"></div>
   </div>
-
   <div class="field-row" style="margin-top:1rem;">
-    <div class="field-group full">
-      <label>Guidance Counselor Signature (type full name)</label>
-      <input type="text" id="counselor_sig" placeholder="">
-    </div>
+    <div class="field-group full"><label>Guidance Counselor Signature (type full name)</label><input type="text" id="counselor_sig"></div>
   </div>
 </div>
 
 <!-- Download Button -->
 <div class="submit-area">
   <button class="btn-download" onclick="generatePDF()">Download Completed Application as PDF</button>
-  <div class="submit-note">Save the PDF, then email it to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f0bb82959994b09793858394de939f9d">[email&#160;protected]</a> &nbsp;|&nbsp; Deadline: May 1, 2026</div>
+  <div class="submit-note">Save the PDF, then email it to <strong id="email-display"></strong> &nbsp;|&nbsp; Deadline: May 1, 2026</div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function val(id) {
-  const el = document.getElementById(id);
-  return el ? el.value.trim() : '';
-}
-
-function generatePDF() {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: 'pt', format: 'letter' });
-
-  const margin = 60;
-  const pageW = 612;
-  const pageH = 792;
-  const contentW = pageW - margin * 2;
-  let y = margin;
-
-  function checkPage(needed = 20) {
-    if (y + needed > pageH - margin) {
-      doc.addPage();
-      y = margin;
-    }
-  }
-
-  function drawPageNum(num) {
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
-    doc.setTextColor(150);
-    doc.text(`${num} | P a g e`, pageW - margin, margin - 20, { align: 'right' });
-    doc.setTextColor(30);
-  }
-
-  function sectionHeader(title) {
-    checkPage(40);
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(11);
-    doc.setTextColor(26, 58, 92);
-    const lines = doc.splitTextToSize(title.toUpperCase(), contentW);
-    lines.forEach(line => {
-      doc.text(line, pageW / 2, y, { align: 'center' });
-      y += 16;
-    });
-    doc.setDrawColor(26, 58, 92);
-    doc.setLineWidth(1.5);
-    doc.line(margin, y, pageW - margin, y);
-    y += 14;
-    doc.setTextColor(30);
-    doc.setDrawColor(0);
-    doc.setLineWidth(0.5);
-  }
-
-  function fieldLine(label, value, labelW) {
-    checkPage(28);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(8);
-    doc.setTextColor(100);
-    doc.text(label.toUpperCase(), margin, y);
-    y += 11;
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(10.5);
-    doc.setTextColor(30);
-    const lines = doc.splitTextToSize(value || ' ', contentW);
-    doc.text(lines[0] || ' ', margin, y);
-    doc.setDrawColor(130);
-    doc.setLineWidth(0.5);
-    doc.line(margin, y + 3, margin + (labelW || contentW), y + 3);
-    y += 20;
-    doc.setDrawColor(0);
-  }
-
-  function inlineFields(fields) {
-    checkPage(32);
-    const totalGap = 12 * (fields.length - 1);
-    const usedFixed = fields.reduce((a, f) => a + (f.fixedW || 0), 0);
-    const flexCount = fields.filter(f => !f.fixedW).length;
-    const flexW = flexCount > 0 ? (contentW - usedFixed - totalGap) / flexCount : 0;
-
-    let x = margin;
-    const startY = y;
-    fields.forEach((f, i) => {
-      const w = f.fixedW || flexW;
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(8);
-      doc.setTextColor(100);
-      doc.text(f.label.toUpperCase(), x, startY);
-      doc.setFontSize(10.5);
-      doc.setTextColor(30);
-      const lines = doc.splitTextToSize(f.value || ' ', w - 2);
-      doc.text(lines[0] || ' ', x, startY + 11);
-      doc.setDrawColor(130);
-      doc.setLineWidth(0.5);
-      doc.line(x, startY + 14, x + w, startY + 14);
-      doc.setDrawColor(0);
-      x += w + 12;
-    });
-    y = startY + 30;
-  }
-
-  function textBlock(label, text) {
-    checkPage(40);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(8);
-    doc.setTextColor(100);
-    doc.text(label.toUpperCase(), margin, y);
-    y += 12;
-    doc.setFontSize(10.5);
-    doc.setTextColor(30);
-    const lines = doc.splitTextToSize(text || ' ', contentW);
-    lines.forEach(line => {
-      checkPage(14);
-      doc.text(line, margin, y);
-      y += 14;
-    });
-    y += 6;
-  }
-
-  function hr() {
-    checkPage(14);
-    doc.setDrawColor(200);
-    doc.setLineWidth(0.5);
-    doc.line(margin, y, pageW - margin, y);
-    y += 12;
-    doc.setDrawColor(0);
-  }
-
-  // ── PAGE 1: Cover Letter ──
-  drawPageNum(1);
-
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(13);
-  doc.setTextColor(26, 58, 92);
-  doc.text('MICHAEL BURROWS FOUNDATION SCHOLARSHIP', pageW / 2, y, { align: 'center' });
-  y += 18;
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(11);
-  doc.text('Grayville, IL', pageW / 2, y, { align: 'center' });
-  y += 8;
-  doc.setDrawColor(26, 58, 92);
-  doc.setLineWidth(2);
-  doc.line(margin, y, pageW - margin, y);
-  y += 2;
-  doc.setLineWidth(0.5);
-  doc.line(margin, y, pageW - margin, y);
-  y += 20;
-  doc.setDrawColor(0);
-  doc.setLineWidth(0.5);
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(10.5);
-  doc.setTextColor(30);
-
-  const introText = [
-    'Dear Candidate for Graduation:',
-    '',
-    'Since 2015, the Michael Burrows Foundation has awarded a scholarship to a graduating senior from Grayville High School. This scholarship is completely funded by donations from corporations, individuals, GHS alumni and friends.',
-    '',
-    'The directors of the Foundation will review the applications and announce the winner at this year\'s high school commencement. Be sure to proofread your application for spelling and grammar.',
-    '',
-    'Please return the application to your guidance counselor and she will sign the document and list your class rank, grade point average and applicable college scores.',
-  ];
-
-  introText.forEach(para => {
-    if (para === '') { y += 6; return; }
-    const lines = doc.splitTextToSize(para, contentW);
-    lines.forEach(line => { doc.text(line, margin, y); y += 15; });
-  });
-
-  y += 10;
-  doc.setDrawColor(26, 58, 92);
-  doc.setLineWidth(0.75);
-  doc.rect(margin, y, contentW, 44);
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(10.5);
-  doc.setTextColor(26, 58, 92);
-  doc.text('Email Completed Form to: Kreid@gcusd.com', pageW / 2, y + 16, { align: 'center' });
-  doc.text('All applications must be turned in no later than May 1, 2026', pageW / 2, y + 32, { align: 'center' });
-  y += 56;
-
-  // ── PAGE 2: Application ──
-  doc.addPage();
-  y = margin;
-  drawPageNum(2);
-
-  sectionHeader('Michael Burrows Foundation\nScholarship Application');
-
-  inlineFields([
-    { label: 'First Name', value: val('fname') },
-    { label: 'Last Name', value: val('lname') },
-    { label: 'Middle Name', value: val('mname'), fixedW: 100 },
-  ]);
-
-  inlineFields([
-    { label: 'Street Address', value: val('street') },
-    { label: 'City', value: val('city') },
-    { label: 'ZIP', value: val('zip'), fixedW: 70 },
-  ]);
-
-  inlineFields([
-    { label: 'Date of Birth', value: val('dob'), fixedW: 130 },
-    { label: 'Phone Number', value: val('phone') },
-  ]);
-
-  fieldLine('Name of Parents or Guardians', val('parents'));
-  hr();
-  fieldLine('Interest in Continuing Education?', val('interest'));
-  fieldLine('Level of Education That You Aspire to Obtain', val('edu_level'));
-  fieldLine('School You Will Be Attending', val('school'));
-  fieldLine('Scholarships Applied For', val('schol_applied'));
-  fieldLine('Scholarships Received', val('schol_received'));
-  hr();
-  textBlock('In what civic/religious activities (not related to school) have you participated?', val('civic'));
-  textBlock('In what school activities/clubs/organizations have you participated?', val('school_activities'));
-  textBlock('List the honors that you have received (include both school and non-school)', val('honors'));
-
-  // ── PAGE 3: Narrative ──
-  doc.addPage();
-  y = margin;
-  drawPageNum(3);
-
-  sectionHeader('Michael Burrows Foundation Scholarship\nNarrative');
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(10.5);
-  doc.setTextColor(30);
-  const narrativeIntro = 'Please type a one-page narrative describing your future educational plans, a summary telling us about yourself, your future aspirations and the reason why you should be chosen as the recipient of this scholarship.';
-  const niLines = doc.splitTextToSize(narrativeIntro, contentW);
-  niLines.forEach(line => { doc.text(line, margin, y); y += 15; });
-  y += 10;
-
-  const narLines = doc.splitTextToSize(val('narrative') || ' ', contentW);
-  narLines.forEach(line => {
-    checkPage(14);
-    doc.text(line, margin, y);
-    y += 14;
-  });
-
-  // ── PAGE 4: Signatures ──
-  doc.addPage();
-  y = margin;
-  drawPageNum(4);
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(10.5);
-  doc.setTextColor(30);
-  const p4intro = 'Final selection for this scholarship may be asked to submit a cover letter to help with the selection process.';
-  doc.splitTextToSize(p4intro, contentW).forEach(l => { doc.text(l, margin, y); y += 15; });
-  y += 10; hr();
-
-  doc.setFont('helvetica', 'italic');
-  doc.setFontSize(10.5);
-  doc.text('I hereby certify that the statements herein are true and correct to the best of my knowledge.', margin, y);
-  y += 20;
-
-  inlineFields([
-    { label: 'Signature', value: val('sig1') },
-    { label: 'Date', value: val('date1'), fixedW: 110 },
-  ]);
-
-  hr();
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(10.5);
-  doc.setTextColor(30);
-  const consentName = val('consent_name') || '___________________________';
-  const consentText = `I ${consentName} give consent to the Michael Burrows Foundation to obtain information and make inquiries needed to verify the information I have submitted to the foundation program under the laws of the state of Illinois, IRS code and related regulations.`;
-  doc.splitTextToSize(consentText, contentW).forEach(l => { doc.text(l, margin, y); y += 15; });
-  y += 10;
-
-  inlineFields([
-    { label: 'Signature', value: val('sig2') },
-    { label: 'Date', value: val('date2'), fixedW: 110 },
-  ]);
-
-  // ── PAGE 5: Counselor ──
-  doc.addPage();
-  y = margin;
-  drawPageNum(5);
-
-  sectionHeader('Michael Burrows Foundation Scholarship\nTo Be Completed by Guidance Counselor');
-
-  inlineFields([
-    { label: 'Year Graduating', value: val('grad_year') },
-    { label: 'High School Class Rank', value: val('class_rank') },
-    { label: 'High School GPA', value: val('gpa') },
-  ]);
-
-  inlineFields([
-    { label: 'ACT Score', va
+<script src="app.js"></script>
+</body>
+</html>
