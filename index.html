@@ -140,7 +140,7 @@
 
   textarea:focus { border-color: #1a3a5c; }
 
-  .narrative-area { min-height: 300px; }
+  .narrative-area { min-height: 950px; }
   .long-area { min-height: 100px; }
 
   .signature-row {
@@ -248,7 +248,7 @@
   </div>
 
   <div class="highlight-box">
-    Email Completed Form to: Kreid@gcusd.com<br>
+    Email Completed Form to: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ce85bcaba7aa8ea9adbbbdaae0ada1a3">[email&#160;protected]</a><br>
     All applications must be turned in no later than <strong>May 1, 2026</strong>
   </div>
 </div>
@@ -470,10 +470,10 @@
 <!-- Download Button -->
 <div class="submit-area">
   <button class="btn-download" onclick="generatePDF()">Download Completed Application as PDF</button>
-  <div class="submit-note">Save the PDF, then email it to Kreid@gcusd.com &nbsp;|&nbsp; Deadline: May 1, 2026</div>
+  <div class="submit-note">Save the PDF, then email it to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f0bb82959994b09793858394de939f9d">[email&#160;protected]</a> &nbsp;|&nbsp; Deadline: May 1, 2026</div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function val(id) {
   const el = document.getElementById(id);
   return el ? el.value.trim() : '';
@@ -759,17 +759,4 @@ function generatePDF() {
   ]);
 
   inlineFields([
-    { label: 'ACT Score', value: val('act') },
-    { label: 'SAT Score', value: val('sat') },
-  ]);
-
-  y += 10;
-  fieldLine('Guidance Counselor Signature', val('counselor_sig'));
-
-  const fname = val('fname') || 'Application';
-  const lname = val('lname') ? '_' + val('lname') : '';
-  doc.save(`MichaelBurrowsFoundation_${fname}${lname}.pdf`);
-}
-</script>
-</body>
-</html>
+    { label: 'ACT Score', va
